@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Core` struct in crate `reactfs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Core">
+
+    <title>reactfs::reactor::Core - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Struct Core</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.new">new</a><a href="#method.handle">handle</a><a href="#method.run">run</a></div></div><p class='location'><a href='../index.html'>reactfs</a>::<wbr><a href='index.html'>reactor</a></p><script>window.sidebarCurrent = {name: 'Core', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>reactfs</a>::<wbr><a href='index.html'>reactor</a>::<wbr><a class="struct" href=''>Core</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/reactfs/reactor/mod.rs.html#307-310' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Core { /* fields omitted */ }</pre><div class='docblock'><p>The <code>Core</code> of the <code>reactor</code> containing the event loop.</p>
+
+<p>Use <code>Core::run()</code> to start the <code>reactor</code> with a <code>Future</code>.</p>
+
+<p>It holds a reference counter reference to <code>Inner</code> as <code>Rc&lt;RefCell&lt;Inner&gt;&gt;</code>.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../reactfs/reactor/struct.Core.html" title="struct reactfs::reactor::Core">Core</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/reactfs/reactor/mod.rs.html#312-430' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;bd_sender: <a class="struct" href="https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Sender.html" title="struct std::sync::mpsc::Sender">Sender</a>&lt;<a class="enum" href="../../reactfs/reactor/enum.BDRequest.html" title="enum reactfs::reactor::BDRequest">BDRequest</a>&gt;, <br>&nbsp;&nbsp;&nbsp;&nbsp;fs_sender: <a class="struct" href="https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Sender.html" title="struct std::sync::mpsc::Sender">Sender</a>&lt;<a class="struct" href="../../reactfs/reactor/struct.FSResponse.html" title="struct reactfs::reactor::FSResponse">FSResponse</a>&gt;, <br>&nbsp;&nbsp;&nbsp;&nbsp;receiver: <a class="struct" href="https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Receiver.html" title="struct std::sync::mpsc::Receiver">Receiver</a>&lt;<a class="enum" href="../../reactfs/reactor/enum.Event.html" title="enum reactfs::reactor::Event">Event</a>&gt;<br>) -&gt; <a class="struct" href="../../reactfs/reactor/struct.Core.html" title="struct reactfs::reactor::Core">Core</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/reactfs/reactor/mod.rs.html#322-327' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Creates a new <code>reactor</code>.</p>
+
+<p>Needs:</p>
+
+<ul>
+<li><p>a channel to send block device requests</p></li>
+<li><p>a channel to send filesystem responses</p></li>
+<li><p>a channel to receive <code>Event</code>s: block device responses or filesystem requests</p></li>
+</ul>
+</div><h4 id='method.handle' class="method"><span id='handle.v' class='invisible'><code>pub fn <a href='#method.handle' class='fnname'>handle</a>(&amp;mut self) -&gt; <a class="struct" href="../../reactfs/reactor/struct.Handle.html" title="struct reactfs::reactor::Handle">Handle</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/reactfs/reactor/mod.rs.html#330-332' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a <code>Handle</code> to the <code>Inner</code> state of the <code>reactor</code>.</p>
+</div><h4 id='method.run' class="method"><span id='run.v' class='invisible'><code>pub fn <a href='#method.run' class='fnname'>run</a>&lt;F&gt;(self, future: F) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;F::<a class="type" href="../../futures/future/trait.Future.html#associatedtype.Item" title="type futures::future::Future::Item">Item</a>, F::<a class="type" href="../../futures/future/trait.Future.html#associatedtype.Error" title="type futures::future::Future::Error">Error</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;F: <a class="trait" href="../../futures/future/trait.Future.html" title="trait futures::future::Future">Future</a>,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/reactfs/reactor/mod.rs.html#341-429' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Runs a <code>future</code> until completion.</p>
+
+<h1 id='return-value' class='section-header'><a href='#return-value'>Return value</a></h1>
+<p>Returns the <code>Result</code> of <code>future</code> if any.</p>
+
+<p>If <code>future</code> is never resolved, this function never returns</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "reactfs";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

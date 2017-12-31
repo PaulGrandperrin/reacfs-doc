@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["task_local","A macro to create a `static` of type `LocalKey`"],["try_ready","A macro for extracting the successful type of a `Poll<T, E>`."]],"mod":[["prelude",""]]});

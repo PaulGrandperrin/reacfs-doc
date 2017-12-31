@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `futures_await_syn` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, futures_await_syn">
+
+    <title>futures_await_syn - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Crate futures_await_syn</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#functions">Functions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'futures_await_syn', ty: 'mod', relpath: '../'};</script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>futures_await_syn</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/futures_await_syn/lib.rs.html#1-332' title='goto source code'>[src]</a></span></h1>
+<h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="delimited/index.html"
+                                  title='mod futures_await_syn::delimited'>delimited</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fold/index.html"
+                                  title='mod futures_await_syn::fold'>fold</a></td>
+                           <td class='docblock-short'>
+                                <p>A Folder represents an AST-&gt;AST fold; it accepts an AST piece,
+and returns a piece of the same type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tokens/index.html"
+                                  title='mod futures_await_syn::tokens'>tokens</a></td>
+                           <td class='docblock-short'>
+                                <p>Discrete tokens that can be parsed out by synom.</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Abi.html"
+                                  title='struct futures_await_syn::Abi'>Abi</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AngleBracketedParameterData.html"
+                                  title='struct futures_await_syn::AngleBracketedParameterData'>AngleBracketedParameterData</a></td>
+                           <td class='docblock-short'>
+                                <p>A path like <code>Foo&lt;&#39;a, T&gt;</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArgCaptured.html"
+                                  title='struct futures_await_syn::ArgCaptured'>ArgCaptured</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArgSelf.html"
+                                  title='struct futures_await_syn::ArgSelf'>ArgSelf</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArgSelfRef.html"
+                                  title='struct futures_await_syn::ArgSelfRef'>ArgSelfRef</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Arm.html"
+                                  title='struct futures_await_syn::Arm'>Arm</a></td>
+                           <td class='docblock-short'>
+                                <p>An arm of a &#39;match&#39;.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Attribute.html"
+                                  title='struct futures_await_syn::Attribute'>Attribute</a></td>
+                           <td class='docblock-short'>
+                                <p>Doc-comments are promoted to attributes that have <code>is_sugared_doc</code> = true</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BareFnArg.html"
+                                  title='struct futures_await_syn::BareFnArg'>BareFnArg</a></td>
+                           <td class='docblock-short'>
+                                <p>An argument in a function type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BareFnTy.html"
+                                  title='struct futures_await_syn::BareFnTy'>BareFnTy</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Block.html"
+                                  title='struct futures_await_syn::Block'>Block</a></td>
+                           <td class='docblock-short'>
+                                <p>A Block (<code>{ .. }</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BodyEnum.html"
+                                  title='struct futures_await_syn::BodyEnum'>BodyEnum</a></td>
+                           <td class='docblock-short'>
+                                <p>It&#39;s an enum.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BodyStruct.html"
+                                  title='struct futures_await_syn::BodyStruct'>BodyStruct</a></td>
+                           <td class='docblock-short'>
+                                <p>It&#39;s a struct.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BoundLifetimes.html"
+                                  title='struct futures_await_syn::BoundLifetimes'>BoundLifetimes</a></td>
+                           <td class='docblock-short'>
+                                <p>A set of bound lifetimes, e.g. <code>for&lt;&#39;a, &#39;b, &#39;c&gt;</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeriveInput.html"
+                                  title='struct futures_await_syn::DeriveInput'>DeriveInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Struct or enum sent to a <code>proc_macro_derive</code> macro.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Expr.html"
+                                  title='struct futures_await_syn::Expr'>Expr</a></td>
+                           <td class='docblock-short'>
+                                <p>An expression.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprAddrOf.html"
+                                  title='struct futures_await_syn::ExprAddrOf'>ExprAddrOf</a></td>
+                           <td class='docblock-short'>
+                                <p>A referencing operation (<code>&amp;a</code> or <code>&amp;mut a</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprArray.html"
+                                  title='struct futures_await_syn::ExprArray'>ExprArray</a></td>
+                           <td class='docblock-short'>
+                                <p>An array, e.g. <code>[a, b, c, d]</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprAssign.html"
+                                  title='struct futures_await_syn::ExprAssign'>ExprAssign</a></td>
+                           <td class='docblock-short'>
+                                <p>An assignment (<code>a = foo()</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprAssignOp.html"
+                                  title='struct futures_await_syn::ExprAssignOp'>ExprAssignOp</a></td>
+                           <td class='docblock-short'>
+                                <p>An assignment with an operator</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprBinary.html"
+                                  title='struct futures_await_syn::ExprBinary'>ExprBinary</a></td>
+                           <td class='docblock-short'>
+                                <p>A binary operation, e.g. <code>a + b</code>, <code>a * b</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprBlock.html"
+                                  title='struct futures_await_syn::ExprBlock'>ExprBlock</a></td>
+                           <td class='docblock-short'>
+                                <p>A block (<code>{ ... }</code> or <code>unsafe { ... }</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprBox.html"
+                                  title='struct futures_await_syn::ExprBox'>ExprBox</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>box x</code> expression.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprBreak.html"
+                                  title='struct futures_await_syn::ExprBreak'>ExprBreak</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>break</code>, with an optional label to break, and an optional expression</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprCall.html"
+                                  title='struct futures_await_syn::ExprCall'>ExprCall</a></td>
+                           <td class='docblock-short'>
+                                <p>A function call.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprCast.html"
+                                  title='struct futures_await_syn::ExprCast'>ExprCast</a></td>
+                           <td class='docblock-short'>
+                                <p>A cast, e.g. <code>foo as f64</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprCatch.html"
+                                  title='struct futures_await_syn::ExprCatch'>ExprCatch</a></td>
+                           <td class='docblock-short'>
+                                <p>A catch expression.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprClosure.html"
+                                  title='struct futures_await_syn::ExprClosure'>ExprClosure</a></td>
+                           <td class='docblock-short'>
+                                <p>A closure (for example, <code>move |a, b, c| a + b + c</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprContinue.html"
+                                  title='struct futures_await_syn::ExprContinue'>ExprContinue</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>continue</code>, with an optional label</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprField.html"
+                                  title='struct futures_await_syn::ExprField'>ExprField</a></td>
+                           <td class='docblock-short'>
+                                <p>Access of a named struct field (<code>obj.foo</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprForLoop.html"
+                                  title='struct futures_await_syn::ExprForLoop'>ExprForLoop</a></td>
+                           <td class='docblock-short'>
+                                <p>A for loop, with an optional label.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprGroup.html"
+                                  title='struct futures_await_syn::ExprGroup'>ExprGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>No-op: used solely so we can pretty-print faithfully</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprIf.html"
+                                  title='struct futures_await_syn::ExprIf'>ExprIf</a></td>
+                           <td class='docblock-short'>
+                                <p>An <code>if</code> block, with an optional else block</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprIfLet.html"
+                                  title='struct futures_await_syn::ExprIfLet'>ExprIfLet</a></td>
+                           <td class='docblock-short'>
+                                <p>An <code>if let</code> expression with an optional else block</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprInPlace.html"
+                                  title='struct futures_await_syn::ExprInPlace'>ExprInPlace</a></td>
+                           <td class='docblock-short'>
+                                <p>E.g. &#39;place &lt;- val&#39; or <code>in place { val }</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprIndex.html"
+                                  title='struct futures_await_syn::ExprIndex'>ExprIndex</a></td>
+                           <td class='docblock-short'>
+                                <p>An indexing operation (<code>foo[2]</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprLoop.html"
+                                  title='struct futures_await_syn::ExprLoop'>ExprLoop</a></td>
+                           <td class='docblock-short'>
+                                <p>Conditionless loop with an optional label.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprMatch.html"
+                                  title='struct futures_await_syn::ExprMatch'>ExprMatch</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>match</code> block.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprMethodCall.html"
+                                  title='struct futures_await_syn::ExprMethodCall'>ExprMethodCall</a></td>
+                           <td class='docblock-short'>
+                                <p>A method call (<code>x.foo::&lt;Bar, Baz&gt;(a, b, c, d)</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprParen.html"
+                                  title='struct futures_await_syn::ExprParen'>ExprParen</a></td>
+                           <td class='docblock-short'>
+                                <p>No-op: used solely so we can pretty-print faithfully</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprPath.html"
+                                  title='struct futures_await_syn::ExprPath'>ExprPath</a></td>
+                           <td class='docblock-short'>
+                                <p>Variable reference, possibly containing <code>::</code> and/or type
+parameters, e.g. foo::bar::<baz>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprRange.html"
+                                  title='struct futures_await_syn::ExprRange'>ExprRange</a></td>
+                           <td class='docblock-short'>
+                                <p>A range (<code>1..2</code>, <code>1..</code>, <code>..2</code>, <code>1...2</code>, <code>1...</code>, <code>...2</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprRepeat.html"
+                                  title='struct futures_await_syn::ExprRepeat'>ExprRepeat</a></td>
+                           <td class='docblock-short'>
+                                <p>An array literal constructed from one repeated element.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprRet.html"
+                                  title='struct futures_await_syn::ExprRet'>ExprRet</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>return</code>, with an optional value to be returned</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprStruct.html"
+                                  title='struct futures_await_syn::ExprStruct'>ExprStruct</a></td>
+                           <td class='docblock-short'>
+                                <p>A struct literal expression.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprTry.html"
+                                  title='struct futures_await_syn::ExprTry'>ExprTry</a></td>
+                           <td class='docblock-short'>
+                                <p><code>expr?</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprTup.html"
+                                  title='struct futures_await_syn::ExprTup'>ExprTup</a></td>
+                           <td class='docblock-short'>
+                                <p>A tuple, e.g. <code>(a, b, c, d)</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprTupField.html"
+                                  title='struct futures_await_syn::ExprTupField'>ExprTupField</a></td>
+                           <td class='docblock-short'>
+                                <p>Access of an unnamed field of a struct or tuple-struct</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprType.html"
+                                  title='struct futures_await_syn::ExprType'>ExprType</a></td>
+                           <td class='docblock-short'>
+                                <p>A type ascription, e.g. <code>foo: f64</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprUnary.html"
+                                  title='struct futures_await_syn::ExprUnary'>ExprUnary</a></td>
+                           <td class='docblock-short'>
+                                <p>A unary operation, e.g. <code>!x</code>, <code>*x</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprWhile.html"
+                                  title='struct futures_await_syn::ExprWhile'>ExprWhile</a></td>
+                           <td class='docblock-short'>
+                                <p>A while loop, with an optional label</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprWhileLet.html"
+                                  title='struct futures_await_syn::ExprWhileLet'>ExprWhileLet</a></td>
+                           <td class='docblock-short'>
+                                <p>A while-let loop, with an optional label.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExprYield.html"
+                                  title='struct futures_await_syn::ExprYield'>ExprYield</a></td>
+                           <td class='docblock-short'>
+                                <p>A yield expression.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Field.html"
+                                  title='struct futures_await_syn::Field'>Field</a></td>
+                           <td class='docblock-short'>
+                                <p>A field of a struct or enum variant.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FieldPat.html"
+                                  title='struct futures_await_syn::FieldPat'>FieldPat</a></td>
+                           <td class='docblock-short'>
+                                <p>A single field in a struct pattern</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FieldValue.html"
+                                  title='struct futures_await_syn::FieldValue'>FieldValue</a></td>
+                           <td class='docblock-short'>
+                                <p>A field-value pair in a struct literal.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.File.html"
+                                  title='struct futures_await_syn::File'>File</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FnDecl.html"
+                                  title='struct futures_await_syn::FnDecl'>FnDecl</a></td>
+                           <td class='docblock-short'>
+                                <p>Header (not the body) of a function declaration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ForeignItem.html"
+                                  title='struct futures_await_syn::ForeignItem'>ForeignItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ForeignItemFn.html"
+                                  title='struct futures_await_syn::ForeignItemFn'>ForeignItemFn</a></td>
+                           <td class='docblock-short'>
+                                <p>A foreign function</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ForeignItemStatic.html"
+                                  title='struct futures_await_syn::ForeignItemStatic'>ForeignItemStatic</a></td>
+                           <td class='docblock-short'>
+                                <p>A foreign static item (<code>static ext: u8</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Generics.html"
+                                  title='struct futures_await_syn::Generics'>Generics</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents lifetimes and type parameters attached to a declaration
+of a function, enum, trait, etc.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Ident.html"
+                                  title='struct futures_await_syn::Ident'>Ident</a></td>
+                           <td class='docblock-short'>
+                                <p>A word of Rust code, such as a keyword or variable name.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImplGenerics.html"
+                                  title='struct futures_await_syn::ImplGenerics'>ImplGenerics</a></td>
+                           <td class='docblock-short'>
+                                <p>Returned by <code>Generics::split_for_impl</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImplItem.html"
+                                  title='struct futures_await_syn::ImplItem'>ImplItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImplItemConst.html"
+                                  title='struct futures_await_syn::ImplItemConst'>ImplItemConst</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImplItemMethod.html"
+                                  title='struct futures_await_syn::ImplItemMethod'>ImplItemMethod</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImplItemType.html"
+                                  title='struct futures_await_syn::ImplItemType'>ImplItemType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Item.html"
+                                  title='struct futures_await_syn::Item'>Item</a></td>
+                           <td class='docblock-short'>
+                                <p>Things that can appear directly inside of a module.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemConst.html"
+                                  title='struct futures_await_syn::ItemConst'>ItemConst</a></td>
+                           <td class='docblock-short'>
+                                <p>A constant item (<code>const</code> or <code>pub const</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemDefaultImpl.html"
+                                  title='struct futures_await_syn::ItemDefaultImpl'>ItemDefaultImpl</a></td>
+                           <td class='docblock-short'>
+                                <p>Default trait implementation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemEnum.html"
+                                  title='struct futures_await_syn::ItemEnum'>ItemEnum</a></td>
+                           <td class='docblock-short'>
+                                <p>An enum definition (<code>enum</code> or <code>pub enum</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemExternCrate.html"
+                                  title='struct futures_await_syn::ItemExternCrate'>ItemExternCrate</a></td>
+                           <td class='docblock-short'>
+                                <p>An <code>extern crate</code> item, with optional original crate name.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemFn.html"
+                                  title='struct futures_await_syn::ItemFn'>ItemFn</a></td>
+                           <td class='docblock-short'>
+                                <p>A function declaration (<code>fn</code> or <code>pub fn</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemForeignMod.html"
+                                  title='struct futures_await_syn::ItemForeignMod'>ItemForeignMod</a></td>
+                           <td class='docblock-short'>
+                                <p>An external module (<code>extern</code> or <code>pub extern</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemImpl.html"
+                                  title='struct futures_await_syn::ItemImpl'>ItemImpl</a></td>
+                           <td class='docblock-short'>
+                                <p>An implementation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemMod.html"
+                                  title='struct futures_await_syn::ItemMod'>ItemMod</a></td>
+                           <td class='docblock-short'>
+                                <p>A module declaration (<code>mod</code> or <code>pub mod</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemStatic.html"
+                                  title='struct futures_await_syn::ItemStatic'>ItemStatic</a></td>
+                           <td class='docblock-short'>
+                                <p>A static item (<code>static</code> or <code>pub static</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemStruct.html"
+                                  title='struct futures_await_syn::ItemStruct'>ItemStruct</a></td>
+                           <td class='docblock-short'>
+                                <p>A struct definition (<code>struct</code> or <code>pub struct</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemTrait.html"
+                                  title='struct futures_await_syn::ItemTrait'>ItemTrait</a></td>
+                           <td class='docblock-short'>
+                                <p>A Trait declaration (<code>trait</code> or <code>pub trait</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemTy.html"
+                                  title='struct futures_await_syn::ItemTy'>ItemTy</a></td>
+                           <td class='docblock-short'>
+                                <p>A type alias (<code>type</code> or <code>pub type</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemUnion.html"
+                                  title='struct futures_await_syn::ItemUnion'>ItemUnion</a></td>
+                           <td class='docblock-short'>
+                                <p>A union definition (<code>union</code> or <code>pub union</code>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ItemUse.html"
+                                  title='struct futures_await_syn::ItemUse'>ItemUse</a></td>
+                           <td class='docblock-short'>
+                                <p>A use declaration (<code>use</code> or <code>pub use</code>) item.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Lifetime.html"
+                                  title='struct futures_await_syn::Lifetime'>Lifetime</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LifetimeDef.html"
+                                  title='struct futures_await_syn::LifetimeDef'>LifetimeDef</a></td>
+                           <td class='docblock-short'>
+                                <p>A lifetime definition, e.g. <code>&#39;a: &#39;b+&#39;c+&#39;d</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Lit.html"
+                                  title='struct futures_await_syn::Lit'>Lit</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Local.html"
+                                  title='struct futures_await_syn::Local'>Local</a></td>
+                           <td class='docblock-short'>
+                                <p>Local represents a <code>let</code> statement, e.g., <code>let &lt;pat&gt;:&lt;ty&gt; = &lt;expr&gt;;</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Mac.html"
+                                  title='struct futures_await_syn::Mac'>Mac</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a macro invocation. The Path indicates which macro
+is being invoked, and the vector of token-trees contains the source
+of the macro invocation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetaItemList.html"
+                                  title='struct futures_await_syn::MetaItemList'>MetaItemList</a></td>
+                           <td class='docblock-short'>
+                                <p>List meta item.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetaNameValue.html"
+                                  title='struct futures_await_syn::MetaNameValue'>MetaNameValue</a></td>
+                           <td class='docblock-short'>
+                                <p>Name-value meta item.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MethodSig.html"
+                                  title='struct futures_await_syn::MethodSig'>MethodSig</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a method&#39;s signature in a trait declaration,
+or in an implementation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MutTy.html"
+                                  title='struct futures_await_syn::MutTy'>MutTy</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParenthesizedParameterData.html"
+                                  title='struct futures_await_syn::ParenthesizedParameterData'>ParenthesizedParameterData</a></td>
+                           <td class='docblock-short'>
+                                <p>A path like <code>Foo(A,B) -&gt; C</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParseError.html"
+                                  title='struct futures_await_syn::ParseError'>ParseError</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatBox.html"
+                                  title='struct futures_await_syn::PatBox'>PatBox</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>box</code> pattern</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatIdent.html"
+                                  title='struct futures_await_syn::PatIdent'>PatIdent</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>Pat::Ident</code> may either be a new bound variable (<code>ref mut binding @ OPT_SUBPATTERN</code>),
+or a unit struct/variant pattern, or a const pattern (in the last two cases the third
+field must be <code>None</code>). Disambiguation cannot be done with parser alone, so it happens
+during name resolution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatLit.html"
+                                  title='struct futures_await_syn::PatLit'>PatLit</a></td>
+                           <td class='docblock-short'>
+                                <p>A literal</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatPath.html"
+                                  title='struct futures_await_syn::PatPath'>PatPath</a></td>
+                           <td class='docblock-short'>
+                                <p>A possibly qualified path pattern.
+Unquailfied path patterns <code>A::B::C</code> can legally refer to variants, structs, constants
+or associated constants. Quailfied path patterns <code>&lt;A&gt;::B::C</code>/<code>&lt;A as Trait&gt;::B::C</code> can
+only legally refer to associated constants.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatRange.html"
+                                  title='struct futures_await_syn::PatRange'>PatRange</a></td>
+                           <td class='docblock-short'>
+                                <p>A range pattern, e.g. <code>1...2</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatRef.html"
+                                  title='struct futures_await_syn::PatRef'>PatRef</a></td>
+                           <td class='docblock-short'>
+                                <p>A reference pattern, e.g. <code>&amp;mut (a, b)</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatSlice.html"
+                                  title='struct futures_await_syn::PatSlice'>PatSlice</a></td>
+                           <td class='docblock-short'>
+                                <p><code>[a, b, i.., y, z]</code> is represented as:</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatStruct.html"
+                                  title='struct futures_await_syn::PatStruct'>PatStruct</a></td>
+                           <td class='docblock-short'>
+                                <p>A struct or struct variant pattern, e.g. <code>Variant {x, y, ..}</code>.
+The <code>bool</code> is <code>true</code> in the presence of a <code>..</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatTuple.html"
+                                  title='struct futures_await_syn::PatTuple'>PatTuple</a></td>
+                           <td class='docblock-short'>
+                                <p>A tuple pattern <code>(a, b)</code>.
+If the <code>..</code> pattern fragment is present, then <code>Option&lt;usize&gt;</code> denotes its position.
+0 &lt;= position &lt;= subpats.len()</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatTupleStruct.html"
+                                  title='struct futures_await_syn::PatTupleStruct'>PatTupleStruct</a></td>
+                           <td class='docblock-short'>
+                                <p>A tuple struct/variant pattern <code>Variant(x, y, .., z)</code>.
+If the <code>..</code> pattern fragment is present, then <code>Option&lt;usize&gt;</code> denotes its position.
+0 &lt;= position &lt;= subpats.len()</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatWild.html"
+                                  title='struct futures_await_syn::PatWild'>PatWild</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a wildcard pattern (<code>_</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Path.html"
+                                  title='struct futures_await_syn::Path'>Path</a></td>
+                           <td class='docblock-short'>
+                                <p>A &quot;Path&quot; is essentially Rust&#39;s notion of a name.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PathGlob.html"
+                                  title='struct futures_await_syn::PathGlob'>PathGlob</a></td>
+                           <td class='docblock-short'>
+                                <p><code>foo::bar::*</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PathList.html"
+                                  title='struct futures_await_syn::PathList'>PathList</a></td>
+                           <td class='docblock-short'>
+                                <p><code>foo::bar::{a, b, c}</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PathListItem.html"
+                                  title='struct futures_await_syn::PathListItem'>PathListItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PathSegment.html"
+                                  title='struct futures_await_syn::PathSegment'>PathSegment</a></td>
+                           <td class='docblock-short'>
+                                <p>A segment of a path: an identifier, an optional lifetime, and a set of types.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PathSimple.html"
+                                  title='struct futures_await_syn::PathSimple'>PathSimple</a></td>
+                           <td class='docblock-short'>
+                                <p><code>foo::bar::baz as quux</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PathTokens.html"
+                                  title='struct futures_await_syn::PathTokens'>PathTokens</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PolyTraitRef.html"
+                                  title='struct futures_await_syn::PolyTraitRef'>PolyTraitRef</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.QSelf.html"
+                                  title='struct futures_await_syn::QSelf'>QSelf</a></td>
+                           <td class='docblock-short'>
+                                <p>The explicit Self type in a &quot;qualified path&quot;. The actual
+path, including the trait and the associated item, is stored
+separately. <code>position</code> represents the index of the associated
+item qualified with this Self type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Span.html"
+                                  title='struct futures_await_syn::Span'>Span</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TokenTree.html"
+                                  title='struct futures_await_syn::TokenTree'>TokenTree</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TraitItem.html"
+                                  title='struct futures_await_syn::TraitItem'>TraitItem</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an item declaration within a trait declaration,
+possibly including a default implementation. A trait item is
+either required (meaning it doesn&#39;t have an implementation, just a
+signature) or provided (meaning it has a default implementation).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TraitItemConst.html"
+                                  title='struct futures_await_syn::TraitItemConst'>TraitItemConst</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TraitItemMethod.html"
+                                  title='struct futures_await_syn::TraitItemMethod'>TraitItemMethod</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TraitItemType.html"
+                                  title='struct futures_await_syn::TraitItemType'>TraitItemType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Turbofish.html"
+                                  title='struct futures_await_syn::Turbofish'>Turbofish</a></td>
+                           <td class='docblock-short'>
+                                <p>Returned by <code>TyGenerics::as_turbofish</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyArray.html"
+                                  title='struct futures_await_syn::TyArray'>TyArray</a></td>
+                           <td class='docblock-short'>
+                                <p>A fixed length array (<code>[T; n]</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyBareFn.html"
+                                  title='struct futures_await_syn::TyBareFn'>TyBareFn</a></td>
+                           <td class='docblock-short'>
+                                <p>A bare function (e.g. <code>fn(usize) -&gt; bool</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyGenerics.html"
+                                  title='struct futures_await_syn::TyGenerics'>TyGenerics</a></td>
+                           <td class='docblock-short'>
+                                <p>Returned by <code>Generics::split_for_impl</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyGroup.html"
+                                  title='struct futures_await_syn::TyGroup'>TyGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>No-op: kept solely so that we can pretty-print faithfully</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyImplTrait.html"
+                                  title='struct futures_await_syn::TyImplTrait'>TyImplTrait</a></td>
+                           <td class='docblock-short'>
+                                <p>An <code>impl Bound1 + Bound2 + Bound3</code> type
+where <code>Bound</code> is a trait or a lifetime.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyInfer.html"
+                                  title='struct futures_await_syn::TyInfer'>TyInfer</a></td>
+                           <td class='docblock-short'>
+                                <p>TyKind::Infer means the type should be inferred instead of it having been
+specified. This can appear anywhere in a type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyNever.html"
+                                  title='struct futures_await_syn::TyNever'>TyNever</a></td>
+                           <td class='docblock-short'>
+                                <p>The never type (<code>!</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyParam.html"
+                                  title='struct futures_await_syn::TyParam'>TyParam</a></td>
+                           <td class='docblock-short'>
+                                <p>A generic type parameter, e.g. <code>T: Into&lt;String&gt;</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyParen.html"
+                                  title='struct futures_await_syn::TyParen'>TyParen</a></td>
+                           <td class='docblock-short'>
+                                <p>No-op; kept solely so that we can pretty-print faithfully</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyPath.html"
+                                  title='struct futures_await_syn::TyPath'>TyPath</a></td>
+                           <td class='docblock-short'>
+                                <p>A path (<code>module::module::...::Type</code>), optionally
+&quot;qualified&quot;, e.g. <code>&lt;Vec&lt;T&gt; as SomeTrait&gt;::SomeType</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyPtr.html"
+                                  title='struct futures_await_syn::TyPtr'>TyPtr</a></td>
+                           <td class='docblock-short'>
+                                <p>A raw pointer (<code>*const T</code> or <code>*mut T</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyRptr.html"
+                                  title='struct futures_await_syn::TyRptr'>TyRptr</a></td>
+                           <td class='docblock-short'>
+                                <p>A reference (<code>&amp;&#39;a T</code> or <code>&amp;&#39;a mut T</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TySlice.html"
+                                  title='struct futures_await_syn::TySlice'>TySlice</a></td>
+                           <td class='docblock-short'>
+                                <p>A variable-length array (<code>[T]</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyTraitObject.html"
+                                  title='struct futures_await_syn::TyTraitObject'>TyTraitObject</a></td>
+                           <td class='docblock-short'>
+                                <p>A trait object type <code>Bound1 + Bound2 + Bound3</code>
+where <code>Bound</code> is a trait or a lifetime.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TyTup.html"
+                                  title='struct futures_await_syn::TyTup'>TyTup</a></td>
+                           <td class='docblock-short'>
+                                <p>A tuple (<code>(A, B, C, D, ...)</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TypeBinding.html"
+                                  title='struct futures_await_syn::TypeBinding'>TypeBinding</a></td>
+                           <td class='docblock-short'>
+                                <p>Bind a type to an associated type: <code>A=Foo</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Variant.html"
+                                  title='struct futures_await_syn::Variant'>Variant</a></td>
+                           <td class='docblock-short'>
+                                <p>An enum variant.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VisCrate.html"
+                                  title='struct futures_await_syn::VisCrate'>VisCrate</a></td>
+                           <td class='docblock-short'>
+                                <p>Crate-visible, i.e. <code>pub(crate)</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VisInherited.html"
+                                  title='struct futures_await_syn::VisInherited'>VisInherited</a></td>
+                           <td class='docblock-short'>
+                                <p>Inherited, i.e. private.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VisPublic.html"
+                                  title='struct futures_await_syn::VisPublic'>VisPublic</a></td>
+                           <td class='docblock-short'>
+                                <p>Public, i.e. <code>pub</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VisRestricted.html"
+                                  title='struct futures_await_syn::VisRestricted'>VisRestricted</a></td>
+                           <td class='docblock-short'>
+                                <p>Restricted, e.g. <code>pub(self)</code> or <code>pub(super)</code> or <code>pub(in some::module)</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WhereBoundPredicate.html"
+                                  title='struct futures_await_syn::WhereBoundPredicate'>WhereBoundPredicate</a></td>
+                           <td class='docblock-short'>
+                                <p>A type binding, e.g. <code>for&lt;&#39;c&gt; Foo: Send+Clone+&#39;c</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WhereClause.html"
+                                  title='struct futures_await_syn::WhereClause'>WhereClause</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>where</code> clause in a definition</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WhereEqPredicate.html"
+                                  title='struct futures_await_syn::WhereEqPredicate'>WhereEqPredicate</a></td>
+                           <td class='docblock-short'>
+                                <p>An equality predicate (unsupported)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WhereRegionPredicate.html"
+                                  title='struct futures_await_syn::WhereRegionPredicate'>WhereRegionPredicate</a></td>
+                           <td class='docblock-short'>
+                                <p>A lifetime predicate, e.g. <code>&#39;a: &#39;b+&#39;c</code></p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AbiKind.html"
+                                  title='enum futures_await_syn::AbiKind'>AbiKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttrStyle.html"
+                                  title='enum futures_await_syn::AttrStyle'>AttrStyle</a></td>
+                           <td class='docblock-short'>
+                                <p>Distinguishes between Attributes that decorate items and Attributes that
+are contained as statements within items. These two cases need to be
+distinguished for pretty-printing.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.BareFnArgName.html"
+                                  title='enum futures_await_syn::BareFnArgName'>BareFnArgName</a></td>
+                           <td class='docblock-short'>
+                                <p>Names of arguments in the <code>BareFnArg</code> structure</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.BinOp.html"
+                                  title='enum futures_await_syn::BinOp'>BinOp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.BindingMode.html"
+                                  title='enum futures_await_syn::BindingMode'>BindingMode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Body.html"
+                                  title='enum futures_await_syn::Body'>Body</a></td>
+                           <td class='docblock-short'>
+                                <p>Body of a derived struct or enum.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CaptureBy.html"
+                                  title='enum futures_await_syn::CaptureBy'>CaptureBy</a></td>
+                           <td class='docblock-short'>
+                                <p>A capture clause</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Constness.html"
+                                  title='enum futures_await_syn::Constness'>Constness</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Defaultness.html"
+                                  title='enum futures_await_syn::Defaultness'>Defaultness</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ExprKind.html"
+                                  title='enum futures_await_syn::ExprKind'>ExprKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.FnArg.html"
+                                  title='enum futures_await_syn::FnArg'>FnArg</a></td>
+                           <td class='docblock-short'>
+                                <p>An argument in a function header.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ForeignItemKind.html"
+                                  title='enum futures_await_syn::ForeignItemKind'>ForeignItemKind</a></td>
+                           <td class='docblock-short'>
+                                <p>An item within an <code>extern</code> block</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.FunctionRetTy.html"
+                                  title='enum futures_await_syn::FunctionRetTy'>FunctionRetTy</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ImplItemKind.html"
+                                  title='enum futures_await_syn::ImplItemKind'>ImplItemKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ImplPolarity.html"
+                                  title='enum futures_await_syn::ImplPolarity'>ImplPolarity</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.InPlaceKind.html"
+                                  title='enum futures_await_syn::InPlaceKind'>InPlaceKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ItemKind.html"
+                                  title='enum futures_await_syn::ItemKind'>ItemKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.LitKind.html"
+                                  title='enum futures_await_syn::LitKind'>LitKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.MacStmtStyle.html"
+                                  title='enum futures_await_syn::MacStmtStyle'>MacStmtStyle</a></td>
+                           <td class='docblock-short'>
+                                <p>How a macro was invoked.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.MetaItem.html"
+                                  title='enum futures_await_syn::MetaItem'>MetaItem</a></td>
+                           <td class='docblock-short'>
+                                <p>A compile-time attribute item.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Mutability.html"
+                                  title='enum futures_await_syn::Mutability'>Mutability</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.NestedMetaItem.html"
+                                  title='enum futures_await_syn::NestedMetaItem'>NestedMetaItem</a></td>
+                           <td class='docblock-short'>
+                                <p>Possible values inside of compile-time attribute lists.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Pat.html"
+                                  title='enum futures_await_syn::Pat'>Pat</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PathParameters.html"
+                                  title='enum futures_await_syn::PathParameters'>PathParameters</a></td>
+                           <td class='docblock-short'>
+                                <p>Parameters of a path segment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RangeLimits.html"
+                                  title='enum futures_await_syn::RangeLimits'>RangeLimits</a></td>
+                           <td class='docblock-short'>
+                                <p>Limit types of a range (inclusive or exclusive)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Stmt.html"
+                                  title='enum futures_await_syn::Stmt'>Stmt</a></td>
+                           <td class='docblock-short'>
+                                <p>A statement, usually ending in a semicolon.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TraitBoundModifier.html"
+                                  title='enum futures_await_syn::TraitBoundModifier'>TraitBoundModifier</a></td>
+                           <td class='docblock-short'>
+                                <p>A modifier on a bound, currently this is only used for <code>?Sized</code>, where the
+modifier is <code>Maybe</code>. Negative bounds should also be handled here.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TraitItemKind.html"
+                                  title='enum futures_await_syn::TraitItemKind'>TraitItemKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Ty.html"
+                                  title='enum futures_await_syn::Ty'>Ty</a></td>
+                           <td class='docblock-short'>
+                                <p>The different kinds of types recognized by the compiler</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TyParamBound.html"
+                                  title='enum futures_await_syn::TyParamBound'>TyParamBound</a></td>
+                           <td class='docblock-short'>
+                                <p>The AST represents all type param bounds as types.
+<code>typeck::collect::compute_bounds</code> matches these against
+the &quot;special&quot; built-in traits (see <code>middle::lang_items</code>) and
+detects Copy, Send and Sync.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UnOp.html"
+                                  title='enum futures_await_syn::UnOp'>UnOp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Unsafety.html"
+                                  title='enum futures_await_syn::Unsafety'>Unsafety</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.VariantData.html"
+                                  title='enum futures_await_syn::VariantData'>VariantData</a></td>
+                           <td class='docblock-short'>
+                                <p>Data stored within an enum variant or struct.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ViewPath.html"
+                                  title='enum futures_await_syn::ViewPath'>ViewPath</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Visibility.html"
+                                  title='enum futures_await_syn::Visibility'>Visibility</a></td>
+                           <td class='docblock-short'>
+                                <p>Visibility level of an item.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.WherePredicate.html"
+                                  title='enum futures_await_syn::WherePredicate'>WherePredicate</a></td>
+                           <td class='docblock-short'>
+                                <p>A single predicate in a <code>where</code> clause</p>
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.parse.html"
+                                  title='fn futures_await_syn::parse'>parse</a></td>
+                           <td class='docblock-short'>
+                                <p>Parse tokens of source code into the chosen syn data type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.parse_file.html"
+                                  title='fn futures_await_syn::parse_file'>parse_file</a></td>
+                           <td class='docblock-short'>
+                                <p>Parse the content of a file of Rust code.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.parse_str.html"
+                                  title='fn futures_await_syn::parse_str'>parse_str</a></td>
+                           <td class='docblock-short'>
+                                <p>Parse a string of Rust code into the chosen syn data type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.parse_tokens.html"
+                                  title='fn futures_await_syn::parse_tokens'>parse_tokens</a></td>
+                           <td class='docblock-short'>
+                                <p>Parse a <code>quote::Tokens</code> of Rust code into the chosen syn data type.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "futures_await_syn";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

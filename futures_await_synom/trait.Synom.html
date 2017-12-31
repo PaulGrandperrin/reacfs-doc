@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Synom` trait in crate `futures_await_synom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Synom">
+
+    <title>futures_await_synom::Synom - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc trait">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Trait Synom</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#required-methods">Required Methods</a><div class="sidebar-links"><a href="#tymethod.parse">parse</a></div><a class="sidebar-title" href="#provided-methods">Provided Methods</a><div class="sidebar-links"><a href="#method.description">description</a></div><a class="sidebar-title" href="#foreign-impls">Implementations on Foreign Types</a><div class="sidebar-links"><a href="#impl-Synom">TokenStream</a></div><a class="sidebar-title" href="#implementors">Implementors</a></div><p class='location'><a href='index.html'>futures_await_synom</a></p><script>window.sidebarCurrent = {name: 'Synom', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>futures_await_synom</a>::<wbr><a class="trait" href=''>Synom</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/futures_await_synom/lib.rs.html#58-64' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait Synom: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a> {
+    fn <a href='#tymethod.parse' class='fnname'>parse</a>(input: <a class="struct" href="../futures_await_synom/cursor/struct.Cursor.html" title="struct futures_await_synom::cursor::Cursor">Cursor</a>) -&gt; <a class="type" href="../futures_await_synom/type.PResult.html" title="type futures_await_synom::PResult">PResult</a>&lt;Self&gt;;
+
+    fn <a href='#method.description' class='fnname'>description</a>() -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;'static <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt; { ... }
+}</pre>
+            <h2 id='required-methods' class='small-section-header'>
+              Required Methods<a href='#required-methods' class='anchor'></a>
+            </h2>
+            <div class='methods'>
+        <h3 id='tymethod.parse' class='method'><span id='parse.v' class='invisible'><code>fn <a href='#tymethod.parse' class='fnname'>parse</a>(input: <a class="struct" href="../futures_await_synom/cursor/struct.Cursor.html" title="struct futures_await_synom::cursor::Cursor">Cursor</a>) -&gt; <a class="type" href="../futures_await_synom/type.PResult.html" title="type futures_await_synom::PResult">PResult</a>&lt;Self&gt;</code></span></h3></div>
+            <h2 id='provided-methods' class='small-section-header'>
+              Provided Methods<a href='#provided-methods' class='anchor'></a>
+            </h2>
+            <div class='methods'>
+        <h3 id='method.description' class='method'><span id='description.v' class='invisible'><code>fn <a href='#method.description' class='fnname'>description</a>() -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;'static <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code></span></h3></div>
+                <h2 id='foreign-impls' class='small-section-header'>
+                  Implementations on Foreign Types<a href='#foreign-impls' class='anchor'></a>
+                </h2>
+            <h3 id='impl-Synom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../futures_await_synom/trait.Synom.html" title="trait futures_await_synom::Synom">Synom</a> for <a class="struct" href="../proc_macro2/struct.TokenStream.html" title="struct proc_macro2::TokenStream">TokenStream</a></code><a href='#impl-Synom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_synom/lib.rs.html#104-108' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.parse' class="method"><span id='parse.v-1' class='invisible'><code>fn <a href='#method.parse' class='fnname'>parse</a>(input: <a class="struct" href="../futures_await_synom/cursor/struct.Cursor.html" title="struct futures_await_synom::cursor::Cursor">Cursor</a>) -&gt; <a class="type" href="../futures_await_synom/type.PResult.html" title="type futures_await_synom::PResult">PResult</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_synom/lib.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.description-1' class="method"><span id='description.v-1' class='invisible'><code>fn <a href='../futures_await_synom/trait.Synom.html#method.description' class='fnname'>description</a>() -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;'static <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_synom/lib.rs.html#61-63' title='goto source code'>[src]</a></span></h4>
+</div></span>
+        <h2 id='implementors' class='small-section-header'>
+          Implementors<a href='#implementors' class='anchor'></a>
+        </h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Add.html" title="struct futures_await_synom::tokens::Add">Add</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.AddEq.html" title="struct futures_await_synom::tokens::AddEq">AddEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.And.html" title="struct futures_await_synom::tokens::And">And</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.AndAnd.html" title="struct futures_await_synom::tokens::AndAnd">AndAnd</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.AndEq.html" title="struct futures_await_synom::tokens::AndEq">AndEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.At.html" title="struct futures_await_synom::tokens::At">At</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Bang.html" title="struct futures_await_synom::tokens::Bang">Bang</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Caret.html" title="struct futures_await_synom::tokens::Caret">Caret</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.CaretEq.html" title="struct futures_await_synom::tokens::CaretEq">CaretEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Colon.html" title="struct futures_await_synom::tokens::Colon">Colon</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Colon2.html" title="struct futures_await_synom::tokens::Colon2">Colon2</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Comma.html" title="struct futures_await_synom::tokens::Comma">Comma</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Div.html" title="struct futures_await_synom::tokens::Div">Div</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.DivEq.html" title="struct futures_await_synom::tokens::DivEq">DivEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Dot.html" title="struct futures_await_synom::tokens::Dot">Dot</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Dot2.html" title="struct futures_await_synom::tokens::Dot2">Dot2</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Dot3.html" title="struct futures_await_synom::tokens::Dot3">Dot3</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Eq.html" title="struct futures_await_synom::tokens::Eq">Eq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.EqEq.html" title="struct futures_await_synom::tokens::EqEq">EqEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Ge.html" title="struct futures_await_synom::tokens::Ge">Ge</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Gt.html" title="struct futures_await_synom::tokens::Gt">Gt</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Le.html" title="struct futures_await_synom::tokens::Le">Le</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Lt.html" title="struct futures_await_synom::tokens::Lt">Lt</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.MulEq.html" title="struct futures_await_synom::tokens::MulEq">MulEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Ne.html" title="struct futures_await_synom::tokens::Ne">Ne</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Or.html" title="struct futures_await_synom::tokens::Or">Or</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.OrEq.html" title="struct futures_await_synom::tokens::OrEq">OrEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.OrOr.html" title="struct futures_await_synom::tokens::OrOr">OrOr</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Pound.html" title="struct futures_await_synom::tokens::Pound">Pound</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Question.html" title="struct futures_await_synom::tokens::Question">Question</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.RArrow.html" title="struct futures_await_synom::tokens::RArrow">RArrow</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.LArrow.html" title="struct futures_await_synom::tokens::LArrow">LArrow</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Rem.html" title="struct futures_await_synom::tokens::Rem">Rem</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.RemEq.html" title="struct futures_await_synom::tokens::RemEq">RemEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Rocket.html" title="struct futures_await_synom::tokens::Rocket">Rocket</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Semi.html" title="struct futures_await_synom::tokens::Semi">Semi</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Shl.html" title="struct futures_await_synom::tokens::Shl">Shl</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.ShlEq.html" title="struct futures_await_synom::tokens::ShlEq">ShlEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Shr.html" title="struct futures_await_synom::tokens::Shr">Shr</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.ShrEq.html" title="struct futures_await_synom::tokens::ShrEq">ShrEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Star.html" title="struct futures_await_synom::tokens::Star">Star</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Sub.html" title="struct futures_await_synom::tokens::Sub">Sub</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.SubEq.html" title="struct futures_await_synom::tokens::SubEq">SubEq</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#43-47' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Underscore.html" title="struct futures_await_synom::tokens::Underscore">Underscore</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.As.html" title="struct futures_await_synom::tokens::As">As</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Box_.html" title="struct futures_await_synom::tokens::Box_">Box_</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Break.html" title="struct futures_await_synom::tokens::Break">Break</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.CapSelf.html" title="struct futures_await_synom::tokens::CapSelf">CapSelf</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Catch.html" title="struct futures_await_synom::tokens::Catch">Catch</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Const.html" title="struct futures_await_synom::tokens::Const">Const</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Continue.html" title="struct futures_await_synom::tokens::Continue">Continue</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Crate.html" title="struct futures_await_synom::tokens::Crate">Crate</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Default_.html" title="struct futures_await_synom::tokens::Default_">Default_</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Do.html" title="struct futures_await_synom::tokens::Do">Do</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Else.html" title="struct futures_await_synom::tokens::Else">Else</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Enum.html" title="struct futures_await_synom::tokens::Enum">Enum</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Extern.html" title="struct futures_await_synom::tokens::Extern">Extern</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Fn_.html" title="struct futures_await_synom::tokens::Fn_">Fn_</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.For.html" title="struct futures_await_synom::tokens::For">For</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.If.html" title="struct futures_await_synom::tokens::If">If</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Impl.html" title="struct futures_await_synom::tokens::Impl">Impl</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.In.html" title="struct futures_await_synom::tokens::In">In</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Let.html" title="struct futures_await_synom::tokens::Let">Let</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Loop.html" title="struct futures_await_synom::tokens::Loop">Loop</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Match.html" title="struct futures_await_synom::tokens::Match">Match</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Mod.html" title="struct futures_await_synom::tokens::Mod">Mod</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Move.html" title="struct futures_await_synom::tokens::Move">Move</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Mut.html" title="struct futures_await_synom::tokens::Mut">Mut</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Pub.html" title="struct futures_await_synom::tokens::Pub">Pub</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Ref.html" title="struct futures_await_synom::tokens::Ref">Ref</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Return.html" title="struct futures_await_synom::tokens::Return">Return</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Self_.html" title="struct futures_await_synom::tokens::Self_">Self_</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Static.html" title="struct futures_await_synom::tokens::Static">Static</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Struct.html" title="struct futures_await_synom::tokens::Struct">Struct</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Super.html" title="struct futures_await_synom::tokens::Super">Super</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Trait.html" title="struct futures_await_synom::tokens::Trait">Trait</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Type.html" title="struct futures_await_synom::tokens::Type">Type</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Union.html" title="struct futures_await_synom::tokens::Union">Union</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Unsafe.html" title="struct futures_await_synom::tokens::Unsafe">Unsafe</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Use.html" title="struct futures_await_synom::tokens::Use">Use</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Where.html" title="struct futures_await_synom::tokens::Where">Where</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.While.html" title="struct futures_await_synom::tokens::While">While</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/futures_await_synom/tokens.rs.html#66-70' title='goto source code'>[src]</a></div><code>impl Synom for <a class="struct" href="../futures_await_synom/tokens/struct.Yield.html" title="struct futures_await_synom::tokens::Yield">Yield</a></code></li>
+</ul><script type="text/javascript" async
+                         src="../implementors/futures_await_synom/trait.Synom.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "futures_await_synom";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

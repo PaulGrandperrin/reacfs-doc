@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Cursor","A cursor into an input `TokenStream`'s data. This cursor holds a reference into the immutable data which is used internally to represent a `TokenStream`, and can be efficiently manipulated and copied around."],["SeqInfo",""],["SynomBuffer","A buffer of data which contains a structured representation of the input `TokenStream` object."]]});

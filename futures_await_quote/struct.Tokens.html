@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Tokens` struct in crate `futures_await_quote`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Tokens">
+
+    <title>futures_await_quote::Tokens - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Struct Tokens</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.new">new</a><a href="#method.append">append</a><a href="#method.append_tokens">append_tokens</a><a href="#method.append_sym">append_sym</a><a href="#method.append_delimited">append_delimited</a><a href="#method.append_all">append_all</a><a href="#method.append_separated">append_separated</a><a href="#method.append_terminated">append_terminated</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-Clone">Clone</a><a href="#impl-From%3CTokens%3E">From&lt;Tokens&gt;</a><a href="#impl-Default">Default</a><a href="#impl-ToTokens">ToTokens</a><a href="#impl-Display">Display</a></div></div><p class='location'><a href='index.html'>futures_await_quote</a></p><script>window.sidebarCurrent = {name: 'Tokens', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>futures_await_quote</a>::<wbr><a class="struct" href=''>Tokens</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#10-12' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Tokens { /* fields omitted */ }</pre><div class='docblock'><p>Tokens produced by a <code>quote!(...)</code> invocation.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#14-122' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>() -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#16-18' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Empty tokens.</p>
+</div><h4 id='method.append' class="method"><span id='append.v' class='invisible'><code>pub fn <a href='#method.append' class='fnname'>append</a>&lt;U&gt;(&amp;mut self, token: U) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;U: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="../proc_macro2/struct.TokenTree.html" title="struct proc_macro2::TokenTree">TokenTree</a>&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#23-27' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>For use by <code>ToTokens</code> implementations.</p>
+
+<p>Appends the token specified to this list of tokens.</p>
+</div><h4 id='method.append_tokens' class="method"><span id='append_tokens.v' class='invisible'><code>pub fn <a href='#method.append_tokens' class='fnname'>append_tokens</a>&lt;T:&nbsp;<a class="trait" href="../futures_await_quote/trait.ToTokens.html" title="trait futures_await_quote::ToTokens">ToTokens</a>&gt;(&amp;mut self, tokens: T)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#30-32' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Add <code>tokens</code> into <code>self</code>.</p>
+</div><h4 id='method.append_sym' class="method"><span id='append_sym.v' class='invisible'><code>pub fn <a href='#method.append_sym' class='fnname'>append_sym</a>(&amp;mut self, sym: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, span: <a class="struct" href="../proc_macro2/struct.Span.html" title="struct proc_macro2::Span">Span</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#35-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Add the symbol specified to this list of tokens.</p>
+</div><h4 id='method.append_delimited' class="method"><span id='append_delimited.v' class='invisible'><code>pub fn <a href='#method.append_delimited' class='fnname'>append_delimited</a>&lt;F, R&gt;(&amp;mut self, delim: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, span: <a class="struct" href="../proc_macro2/struct.Span.html" title="struct proc_macro2::Span">Span</a>, f: F) -&gt; R <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;F: <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnOnce.html" title="trait core::ops::function::FnOnce">FnOnce</a>(&amp;mut <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a>) -&gt; R,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#42-62' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.append_all' class="method"><span id='append_all.v' class='invisible'><code>pub fn <a href='#method.append_all' class='fnname'>append_all</a>&lt;T, I&gt;(&amp;mut self, iter: I) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../futures_await_quote/trait.ToTokens.html" title="trait futures_await_quote::ToTokens">ToTokens</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html" title="trait core::iter::traits::IntoIterator">IntoIterator</a>&lt;Item = T&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#82-89' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>For use by <code>ToTokens</code> implementations.</p>
+
+<pre class="rust rust-example-rendered">
+<span class="kw">struct</span> <span class="ident">X</span>;
+
+<span class="kw">impl</span> <span class="ident">ToTokens</span> <span class="kw">for</span> <span class="ident">X</span> {
+    <span class="kw">fn</span> <span class="ident">to_tokens</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">tokens</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">Tokens</span>) {
+        <span class="ident">tokens</span>.<span class="ident">append_all</span>(<span class="kw-2">&amp;</span>[<span class="bool-val">true</span>, <span class="bool-val">false</span>]);
+    }
+}
+
+<span class="kw">let</span> <span class="ident">tokens</span> <span class="op">=</span> <span class="macro">quote</span><span class="macro">!</span>(#<span class="ident">X</span>);
+<span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">tokens</span>.<span class="ident">to_string</span>(), <span class="string">&quot;true false&quot;</span>);</pre>
+</div><h4 id='method.append_separated' class="method"><span id='append_separated.v' class='invisible'><code>pub fn <a href='#method.append_separated' class='fnname'>append_separated</a>&lt;T, I, U&gt;(&amp;mut self, iter: I, op: U) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../futures_await_quote/trait.ToTokens.html" title="trait futures_await_quote::ToTokens">ToTokens</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html" title="trait core::iter::traits::IntoIterator">IntoIterator</a>&lt;Item = T&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;U: <a class="trait" href="../futures_await_quote/trait.ToTokens.html" title="trait futures_await_quote::ToTokens">ToTokens</a>,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#95-106' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>For use by <code>ToTokens</code> implementations.</p>
+
+<p>Appends all of the items in the iterator <code>I</code>, separated by the tokens
+<code>U</code>.</p>
+</div><h4 id='method.append_terminated' class="method"><span id='append_terminated.v' class='invisible'><code>pub fn <a href='#method.append_terminated' class='fnname'>append_terminated</a>&lt;T, I, U&gt;(&amp;mut self, iter: I, term: U) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../futures_await_quote/trait.ToTokens.html" title="trait futures_await_quote::ToTokens">ToTokens</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html" title="trait core::iter::traits::IntoIterator">IntoIterator</a>&lt;Item = T&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;U: <a class="trait" href="../futures_await_quote/trait.ToTokens.html" title="trait futures_await_quote::ToTokens">ToTokens</a>,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#112-121' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>For use by <code>ToTokens</code> implementations.</p>
+
+<p>Appends all tokens in the iterator <code>I</code>, appending <code>U</code> after each
+element, including after the last element of the iterator.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Clone' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a></code><a href='#impl-Clone' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#9' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#9' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#112-114' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 id='impl-From%3CTokens%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a>&gt; for <a class="struct" href="../proc_macro2/struct.TokenStream.html" title="struct proc_macro2::TokenStream">TokenStream</a></code><a href='#impl-From%3CTokens%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#124-128' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class="method"><span id='from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(tokens: <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a>) -&gt; <a class="struct" href="../proc_macro2/struct.TokenStream.html" title="struct proc_macro2::TokenStream">TokenStream</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#125-127' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTokens%3E-1' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a>&gt; for <a class="struct" href="https://doc.rust-lang.org/nightly/proc_macro/struct.TokenStream.html" title="struct proc_macro::TokenStream">TokenStream</a></code><a href='#impl-From%3CTokens%3E-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#130-134' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-1' class="method"><span id='from.v-1' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(tokens: <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a>) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/proc_macro/struct.TokenStream.html" title="struct proc_macro::TokenStream">TokenStream</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#131-133' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-Default' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> for <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a></code><a href='#impl-Default' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#136-140' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class="method"><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#137-139' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 id='impl-ToTokens' class='impl'><span class='in-band'><code>impl <a class="trait" href="../futures_await_quote/trait.ToTokens.html" title="trait futures_await_quote::ToTokens">ToTokens</a> for <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a></code><a href='#impl-ToTokens' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#142-150' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.to_tokens' class="method"><span id='to_tokens.v' class='invisible'><code>fn <a href='../futures_await_quote/trait.ToTokens.html#tymethod.to_tokens' class='fnname'>to_tokens</a>(&amp;self, dst: &amp;mut <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#143-145' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Write <code>self</code> to the given <code>Tokens</code>. <a href="../futures_await_quote/trait.ToTokens.html#tymethod.to_tokens">Read more</a></p>
+</div><h4 id='method.into_tokens' class="method"><span id='into_tokens.v' class='invisible'><code>fn <a href='../futures_await_quote/trait.ToTokens.html#method.into_tokens' class='fnname'>into_tokens</a>(self) -&gt; <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#147-149' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert <code>self</code> directly into a <code>Tokens</code> object. <a href="../futures_await_quote/trait.ToTokens.html#method.into_tokens">Read more</a></p>
+</div></div><h3 id='impl-Display' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html" title="trait core::fmt::Display">Display</a> for <a class="struct" href="../futures_await_quote/struct.Tokens.html" title="struct futures_await_quote::Tokens">Tokens</a></code><a href='#impl-Display' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#164-168' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, formatter: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Error.html" title="struct core::fmt::Error">Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/tokens.rs.html#165-167' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter. <a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "futures_await_quote";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

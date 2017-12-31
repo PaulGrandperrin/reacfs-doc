@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `futures_await_synom` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, futures_await_synom">
+
+    <title>futures_await_synom - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Crate futures_await_synom</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#reexports">Reexports</a></li><li><a href="#modules">Modules</a></li><li><a href="#macros">Macros</a></li><li><a href="#structs">Structs</a></li><li><a href="#traits">Traits</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'futures_await_synom', ty: 'mod', relpath: '../'};</script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>futures_await_synom</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/futures_await_synom/lib.rs.html#1-808' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Adapted from <a href="https://github.com/Geal/nom"><code>nom</code></a> by removing the
+<code>IPResult::Incomplete</code> variant which:</p>
+
+<ul>
+<li>we don&#39;t need,</li>
+<li>is an unintuitive footgun when working with non-streaming use cases, and</li>
+<li>more than doubles compilation time.</li>
+</ul>
+
+<h2 id='whitespace-handling-strategy' class='section-header'><a href='#whitespace-handling-strategy'>Whitespace handling strategy</a></h2>
+<p>As (sy)nom is a parser combinator library, the parsers provided here and
+that you implement yourself are all made up of successively more primitive
+parsers, eventually culminating in a small number of fundamental parsers
+that are implemented in Rust. Among these are <code>punct!</code> and <code>keyword!</code>.</p>
+
+<p>All synom fundamental parsers (those not combined out of other parsers)
+should be written to skip over leading whitespace in their input. This way,
+as long as every parser eventually boils down to some combination of
+fundamental parsers, we get correct whitespace handling at all levels for
+free.</p>
+
+<p>For our use case, this strategy is a huge improvement in usability,
+correctness, and compile time over nom&#39;s <code>ws!</code> strategy.</p>
+</div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+<table><tr><td><code>pub use cursor::<a class="struct" href="../futures_await_synom/cursor/struct.SynomBuffer.html" title="struct futures_await_synom::cursor::SynomBuffer">SynomBuffer</a>;</code></td></tr><tr><td><code>pub use cursor::<a class="struct" href="../futures_await_synom/cursor/struct.Cursor.html" title="struct futures_await_synom::cursor::Cursor">Cursor</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="cursor/index.html"
+                                  title='mod futures_await_synom::cursor'>cursor</a></td>
+                           <td class='docblock-short'>
+                                <p>This module defines a cheaply-copyable cursor into a TokenStream&#39;s data.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="delimited/index.html"
+                                  title='mod futures_await_synom::delimited'>delimited</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="span/index.html"
+                                  title='mod futures_await_synom::span'>span</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tokens/index.html"
+                                  title='mod futures_await_synom::tokens'>tokens</a></td>
+                           <td class='docblock-short'>
+                                <p>Discrete tokens that can be parsed out by synom.</p>
+                           </td>
+                       </tr></table><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.alt.html"
+                                  title='macro futures_await_synom::alt'>alt</a></td>
+                           <td class='docblock-short'>
+                                <p>Run a series of parsers, returning the result of the first one which
+succeeds.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.braces.html"
+                                  title='macro futures_await_synom::braces'>braces</a></td>
+                           <td class='docblock-short'>
+                                <p>Same as the <code>parens</code> macro, but for braces.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.brackets.html"
+                                  title='macro futures_await_synom::brackets'>brackets</a></td>
+                           <td class='docblock-short'>
+                                <p>Same as the <code>parens</code> macro, but for brackets.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.call.html"
+                                  title='macro futures_await_synom::call'>call</a></td>
+                           <td class='docblock-short'>
+                                <p>Invoke the given parser function with the passed in arguments.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.cond.html"
+                                  title='macro futures_await_synom::cond'>cond</a></td>
+                           <td class='docblock-short'>
+                                <p>Conditionally execute the given parser.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.cond_reduce.html"
+                                  title='macro futures_await_synom::cond_reduce'>cond_reduce</a></td>
+                           <td class='docblock-short'>
+                                <p>Fail to parse if condition is false, otherwise parse the given parser.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.do_parse.html"
+                                  title='macro futures_await_synom::do_parse'>do_parse</a></td>
+                           <td class='docblock-short'>
+                                <p>Run a series of parsers, one after another, optionally assigning the results
+a name. Fail if any of the parsers fails.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.epsilon.html"
+                                  title='macro futures_await_synom::epsilon'>epsilon</a></td>
+                           <td class='docblock-short'>
+                                <p>Parses nothing and always succeeds.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.grouped.html"
+                                  title='macro futures_await_synom::grouped'>grouped</a></td>
+                           <td class='docblock-short'>
+                                <p>Same as the <code>parens</code> macro, but for none-delimited sequences (groups).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.input_end.html"
+                                  title='macro futures_await_synom::input_end'>input_end</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.many0.html"
+                                  title='macro futures_await_synom::many0'>many0</a></td>
+                           <td class='docblock-short'>
+                                <p>Parse zero or more values using the given parser.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.map.html"
+                                  title='macro futures_await_synom::map'>map</a></td>
+                           <td class='docblock-short'>
+                                <p>Transform the result of a parser by applying a function or closure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.named.html"
+                                  title='macro futures_await_synom::named'>named</a></td>
+                           <td class='docblock-short'>
+                                <p>Define a function from a parser combination.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.not.html"
+                                  title='macro futures_await_synom::not'>not</a></td>
+                           <td class='docblock-short'>
+                                <p>Parses successfully if the given parser fails to parse. Does not consume any
+of the input.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.opt_vec.html"
+                                  title='macro futures_await_synom::opt_vec'>opt_vec</a></td>
+                           <td class='docblock-short'>
+                                <p>Turn a failed parse into an empty vector. The argument parser must itself
+return a vector.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.option.html"
+                                  title='macro futures_await_synom::option'>option</a></td>
+                           <td class='docblock-short'>
+                                <p>Turn a failed parse into <code>None</code> and a successful parse into <code>Some</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.parens.html"
+                                  title='macro futures_await_synom::parens'>parens</a></td>
+                           <td class='docblock-short'>
+                                <p>Parse a parenthesized-surrounded subtree.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.peek.html"
+                                  title='macro futures_await_synom::peek'>peek</a></td>
+                           <td class='docblock-short'>
+                                <p>Parse a value without consuming it from the input data.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.switch.html"
+                                  title='macro futures_await_synom::switch'>switch</a></td>
+                           <td class='docblock-short'>
+                                <p>Pattern-match the result of a parser to select which other parser to run.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.syn.html"
+                                  title='macro futures_await_synom::syn'>syn</a></td>
+                           <td class='docblock-short'>
+                                <p>Parse a type through the <code>Synom</code> trait.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.terminated.html"
+                                  title='macro futures_await_synom::terminated'>terminated</a></td>
+                           <td class='docblock-short'>
+                                <p>Parse two things, returning the value of the first.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.tuple.html"
+                                  title='macro futures_await_synom::tuple'>tuple</a></td>
+                           <td class='docblock-short'>
+                                <p>Run a series of parsers and produce all of the results in a tuple.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.value.html"
+                                  title='macro futures_await_synom::value'>value</a></td>
+                           <td class='docblock-short'>
+                                <p>Produce the given value without parsing anything. Useful as an argument to
+<code>switch!</code>.</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParseError.html"
+                                  title='struct futures_await_synom::ParseError'>ParseError</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Synom.html"
+                                  title='trait futures_await_synom::Synom'>Synom</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.parse_error.html"
+                                  title='fn futures_await_synom::parse_error'>parse_error</a></td>
+                           <td class='docblock-short'>
+                                <p>An error with a default error message.</p>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.PResult.html"
+                                  title='type futures_await_synom::PResult'>PResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a parser</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "futures_await_synom";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

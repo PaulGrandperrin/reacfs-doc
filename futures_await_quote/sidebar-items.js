@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["quote","The whole point."]],"mod":[["__rt",""]],"struct":[["ByteStr","Wrap a `&str` so it interpolates as a byte-string: `b\"abc\"`."],["Tokens","Tokens produced by a `quote!(...)` invocation."]],"trait":[["ToTokens","Types that can be interpolated inside a `quote!(...)` invocation."]]});

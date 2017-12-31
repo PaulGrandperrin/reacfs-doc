@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Ty` enum in crate `futures_await_syn`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Ty">
+
+    <title>futures_await_syn::Ty - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Enum Ty</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#variants">Variants</a><div class="sidebar-links"><a href="#variant.Slice">Slice</a><a href="#variant.Array">Array</a><a href="#variant.Ptr">Ptr</a><a href="#variant.Rptr">Rptr</a><a href="#variant.BareFn">BareFn</a><a href="#variant.Never">Never</a><a href="#variant.Tup">Tup</a><a href="#variant.Path">Path</a><a href="#variant.TraitObject">TraitObject</a><a href="#variant.ImplTrait">ImplTrait</a><a href="#variant.Paren">Paren</a><a href="#variant.Group">Group</a><a href="#variant.Infer">Infer</a><a href="#variant.Mac">Mac</a></div><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.without_plus">without_plus</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-From%3CTy%3E">From&lt;Ty&gt;</a><a href="#impl-Synom">Synom</a><a href="#impl-From%3CTySlice%3E">From&lt;TySlice&gt;</a><a href="#impl-From%3CTyArray%3E">From&lt;TyArray&gt;</a><a href="#impl-From%3CTyPtr%3E">From&lt;TyPtr&gt;</a><a href="#impl-From%3CTyRptr%3E">From&lt;TyRptr&gt;</a><a href="#impl-From%3CTyBareFn%3E">From&lt;TyBareFn&gt;</a><a href="#impl-From%3CTyNever%3E">From&lt;TyNever&gt;</a><a href="#impl-From%3CTyTup%3E">From&lt;TyTup&gt;</a><a href="#impl-From%3CTyPath%3E">From&lt;TyPath&gt;</a><a href="#impl-From%3CTyTraitObject%3E">From&lt;TyTraitObject&gt;</a><a href="#impl-From%3CTyImplTrait%3E">From&lt;TyImplTrait&gt;</a><a href="#impl-From%3CTyParen%3E">From&lt;TyParen&gt;</a><a href="#impl-From%3CTyGroup%3E">From&lt;TyGroup&gt;</a><a href="#impl-From%3CTyInfer%3E">From&lt;TyInfer&gt;</a><a href="#impl-From%3CMac%3E">From&lt;Mac&gt;</a><a href="#impl-ToTokens">ToTokens</a></div></div><p class='location'><a href='index.html'>futures_await_syn</a></p><script>window.sidebarCurrent = {name: 'Ty', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>futures_await_syn</a>::<wbr><a class="enum" href=''>Ty</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/futures_await_syn/macros.rs.html#40-42' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Ty {
+    Slice(<a class="struct" href="../futures_await_syn/struct.TySlice.html" title="struct futures_await_syn::TySlice">TySlice</a>),
+    Array(<a class="struct" href="../futures_await_syn/struct.TyArray.html" title="struct futures_await_syn::TyArray">TyArray</a>),
+    Ptr(<a class="struct" href="../futures_await_syn/struct.TyPtr.html" title="struct futures_await_syn::TyPtr">TyPtr</a>),
+    Rptr(<a class="struct" href="../futures_await_syn/struct.TyRptr.html" title="struct futures_await_syn::TyRptr">TyRptr</a>),
+    BareFn(<a class="struct" href="../futures_await_syn/struct.TyBareFn.html" title="struct futures_await_syn::TyBareFn">TyBareFn</a>),
+    Never(<a class="struct" href="../futures_await_syn/struct.TyNever.html" title="struct futures_await_syn::TyNever">TyNever</a>),
+    Tup(<a class="struct" href="../futures_await_syn/struct.TyTup.html" title="struct futures_await_syn::TyTup">TyTup</a>),
+    Path(<a class="struct" href="../futures_await_syn/struct.TyPath.html" title="struct futures_await_syn::TyPath">TyPath</a>),
+    TraitObject(<a class="struct" href="../futures_await_syn/struct.TyTraitObject.html" title="struct futures_await_syn::TyTraitObject">TyTraitObject</a>),
+    ImplTrait(<a class="struct" href="../futures_await_syn/struct.TyImplTrait.html" title="struct futures_await_syn::TyImplTrait">TyImplTrait</a>),
+    Paren(<a class="struct" href="../futures_await_syn/struct.TyParen.html" title="struct futures_await_syn::TyParen">TyParen</a>),
+    Group(<a class="struct" href="../futures_await_syn/struct.TyGroup.html" title="struct futures_await_syn::TyGroup">TyGroup</a>),
+    Infer(<a class="struct" href="../futures_await_syn/struct.TyInfer.html" title="struct futures_await_syn::TyInfer">TyInfer</a>),
+    Mac(<a class="struct" href="../futures_await_syn/struct.Mac.html" title="struct futures_await_syn::Mac">Mac</a>),
+}</pre><div class='docblock'><p>The different kinds of types recognized by the compiler</p>
+</div><h2 id='variants' class='variants small-section-header'>
+                   Variants<a href='#variants' class='anchor'></a></h2>
+<span id="variant.Slice" class="variant small-section-header"><a href="#variant.Slice" class="anchor field"></a><span id='Slice.v' class='invisible'><code>Slice(<a class="struct" href="../futures_await_syn/struct.TySlice.html" title="struct futures_await_syn::TySlice">TySlice</a>)</code></span></span><div class='docblock'><p>A variable-length array (<code>[T]</code>)</p>
+</div><span id="variant.Array" class="variant small-section-header"><a href="#variant.Array" class="anchor field"></a><span id='Array.v' class='invisible'><code>Array(<a class="struct" href="../futures_await_syn/struct.TyArray.html" title="struct futures_await_syn::TyArray">TyArray</a>)</code></span></span><div class='docblock'><p>A fixed length array (<code>[T; n]</code>)</p>
+</div><span id="variant.Ptr" class="variant small-section-header"><a href="#variant.Ptr" class="anchor field"></a><span id='Ptr.v' class='invisible'><code>Ptr(<a class="struct" href="../futures_await_syn/struct.TyPtr.html" title="struct futures_await_syn::TyPtr">TyPtr</a>)</code></span></span><div class='docblock'><p>A raw pointer (<code>*const T</code> or <code>*mut T</code>)</p>
+</div><span id="variant.Rptr" class="variant small-section-header"><a href="#variant.Rptr" class="anchor field"></a><span id='Rptr.v' class='invisible'><code>Rptr(<a class="struct" href="../futures_await_syn/struct.TyRptr.html" title="struct futures_await_syn::TyRptr">TyRptr</a>)</code></span></span><div class='docblock'><p>A reference (<code>&amp;&#39;a T</code> or <code>&amp;&#39;a mut T</code>)</p>
+</div><span id="variant.BareFn" class="variant small-section-header"><a href="#variant.BareFn" class="anchor field"></a><span id='BareFn.v' class='invisible'><code>BareFn(<a class="struct" href="../futures_await_syn/struct.TyBareFn.html" title="struct futures_await_syn::TyBareFn">TyBareFn</a>)</code></span></span><div class='docblock'><p>A bare function (e.g. <code>fn(usize) -&gt; bool</code>)</p>
+</div><span id="variant.Never" class="variant small-section-header"><a href="#variant.Never" class="anchor field"></a><span id='Never.v' class='invisible'><code>Never(<a class="struct" href="../futures_await_syn/struct.TyNever.html" title="struct futures_await_syn::TyNever">TyNever</a>)</code></span></span><div class='docblock'><p>The never type (<code>!</code>)</p>
+</div><span id="variant.Tup" class="variant small-section-header"><a href="#variant.Tup" class="anchor field"></a><span id='Tup.v' class='invisible'><code>Tup(<a class="struct" href="../futures_await_syn/struct.TyTup.html" title="struct futures_await_syn::TyTup">TyTup</a>)</code></span></span><div class='docblock'><p>A tuple (<code>(A, B, C, D, ...)</code>)</p>
+</div><span id="variant.Path" class="variant small-section-header"><a href="#variant.Path" class="anchor field"></a><span id='Path.v' class='invisible'><code>Path(<a class="struct" href="../futures_await_syn/struct.TyPath.html" title="struct futures_await_syn::TyPath">TyPath</a>)</code></span></span><div class='docblock'><p>A path (<code>module::module::...::Type</code>), optionally
+&quot;qualified&quot;, e.g. <code>&lt;Vec&lt;T&gt; as SomeTrait&gt;::SomeType</code>.</p>
+
+<p>Type parameters are stored in the Path itself</p>
+</div><span id="variant.TraitObject" class="variant small-section-header"><a href="#variant.TraitObject" class="anchor field"></a><span id='TraitObject.v' class='invisible'><code>TraitObject(<a class="struct" href="../futures_await_syn/struct.TyTraitObject.html" title="struct futures_await_syn::TyTraitObject">TyTraitObject</a>)</code></span></span><div class='docblock'><p>A trait object type <code>Bound1 + Bound2 + Bound3</code>
+where <code>Bound</code> is a trait or a lifetime.</p>
+</div><span id="variant.ImplTrait" class="variant small-section-header"><a href="#variant.ImplTrait" class="anchor field"></a><span id='ImplTrait.v' class='invisible'><code>ImplTrait(<a class="struct" href="../futures_await_syn/struct.TyImplTrait.html" title="struct futures_await_syn::TyImplTrait">TyImplTrait</a>)</code></span></span><div class='docblock'><p>An <code>impl Bound1 + Bound2 + Bound3</code> type
+where <code>Bound</code> is a trait or a lifetime.</p>
+</div><span id="variant.Paren" class="variant small-section-header"><a href="#variant.Paren" class="anchor field"></a><span id='Paren.v' class='invisible'><code>Paren(<a class="struct" href="../futures_await_syn/struct.TyParen.html" title="struct futures_await_syn::TyParen">TyParen</a>)</code></span></span><div class='docblock'><p>No-op; kept solely so that we can pretty-print faithfully</p>
+</div><span id="variant.Group" class="variant small-section-header"><a href="#variant.Group" class="anchor field"></a><span id='Group.v' class='invisible'><code>Group(<a class="struct" href="../futures_await_syn/struct.TyGroup.html" title="struct futures_await_syn::TyGroup">TyGroup</a>)</code></span></span><div class='docblock'><p>No-op: kept solely so that we can pretty-print faithfully</p>
+</div><span id="variant.Infer" class="variant small-section-header"><a href="#variant.Infer" class="anchor field"></a><span id='Infer.v' class='invisible'><code>Infer(<a class="struct" href="../futures_await_syn/struct.TyInfer.html" title="struct futures_await_syn::TyInfer">TyInfer</a>)</code></span></span><div class='docblock'><p>TyKind::Infer means the type should be inferred instead of it having been
+specified. This can appear anywhere in a type.</p>
+</div><span id="variant.Mac" class="variant small-section-header"><a href="#variant.Mac" class="anchor field"></a><span id='Mac.v' class='invisible'><code>Mac(<a class="struct" href="../futures_await_syn/struct.Mac.html" title="struct futures_await_syn::Mac">Mac</a>)</code></span></span><div class='docblock'><p>A macro in the type position.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/ty.rs.html#349-356' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.without_plus' class="method"><span id='without_plus.v' class='invisible'><code>pub fn <a href='#method.without_plus' class='fnname'>without_plus</a>(i: <a class="struct" href="../futures_await_synom/cursor/struct.Cursor.html" title="struct futures_await_synom::cursor::Cursor">Cursor</a>) -&gt; <a class="type" href="../futures_await_synom/type.PResult.html" title="type futures_await_synom::PResult">PResult</a>&lt;Self&gt;</code></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-From%3CTy%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a>&gt; for <a class="enum" href="../futures_await_syn/enum.FnArg.html" title="enum futures_await_syn::FnArg">FnArg</a></code><a href='#impl-From%3CTy%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class="method"><span id='from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.FnArg.html" title="enum futures_await_syn::FnArg">FnArg</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-Synom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../futures_await_synom/trait.Synom.html" title="trait futures_await_synom::Synom">Synom</a> for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-Synom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/ty.rs.html#341-347' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.parse' class="method"><span id='parse.v' class='invisible'><code>fn <a href='../futures_await_synom/trait.Synom.html#tymethod.parse' class='fnname'>parse</a>(i: <a class="struct" href="../futures_await_synom/cursor/struct.Cursor.html" title="struct futures_await_synom::cursor::Cursor">Cursor</a>) -&gt; <a class="type" href="../futures_await_synom/type.PResult.html" title="type futures_await_synom::PResult">PResult</a>&lt;Self&gt;</code></span></h4>
+<h4 id='method.description' class="method"><span id='description.v' class='invisible'><code>fn <a href='../futures_await_synom/trait.Synom.html#method.description' class='fnname'>description</a>() -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;'static <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/ty.rs.html#344-346' title='goto source code'>[src]</a></span></h4>
+</div><h3 id='impl-From%3CTySlice%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TySlice.html" title="struct futures_await_syn::TySlice">TySlice</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTySlice%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-1' class="method"><span id='from.v-1' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TySlice.html" title="struct futures_await_syn::TySlice">TySlice</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyArray%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyArray.html" title="struct futures_await_syn::TyArray">TyArray</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyArray%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-2' class="method"><span id='from.v-2' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyArray.html" title="struct futures_await_syn::TyArray">TyArray</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyPtr%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyPtr.html" title="struct futures_await_syn::TyPtr">TyPtr</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyPtr%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-3' class="method"><span id='from.v-3' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyPtr.html" title="struct futures_await_syn::TyPtr">TyPtr</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyRptr%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyRptr.html" title="struct futures_await_syn::TyRptr">TyRptr</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyRptr%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-4' class="method"><span id='from.v-4' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyRptr.html" title="struct futures_await_syn::TyRptr">TyRptr</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyBareFn%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyBareFn.html" title="struct futures_await_syn::TyBareFn">TyBareFn</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyBareFn%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-5' class="method"><span id='from.v-5' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyBareFn.html" title="struct futures_await_syn::TyBareFn">TyBareFn</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyNever%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyNever.html" title="struct futures_await_syn::TyNever">TyNever</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyNever%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-6' class="method"><span id='from.v-6' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyNever.html" title="struct futures_await_syn::TyNever">TyNever</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyTup%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyTup.html" title="struct futures_await_syn::TyTup">TyTup</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyTup%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-7' class="method"><span id='from.v-7' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyTup.html" title="struct futures_await_syn::TyTup">TyTup</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyPath%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyPath.html" title="struct futures_await_syn::TyPath">TyPath</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyPath%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-8' class="method"><span id='from.v-8' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyPath.html" title="struct futures_await_syn::TyPath">TyPath</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyTraitObject%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyTraitObject.html" title="struct futures_await_syn::TyTraitObject">TyTraitObject</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyTraitObject%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-9' class="method"><span id='from.v-9' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyTraitObject.html" title="struct futures_await_syn::TyTraitObject">TyTraitObject</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyImplTrait%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyImplTrait.html" title="struct futures_await_syn::TyImplTrait">TyImplTrait</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyImplTrait%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-10' class="method"><span id='from.v-10' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyImplTrait.html" title="struct futures_await_syn::TyImplTrait">TyImplTrait</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyParen%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyParen.html" title="struct futures_await_syn::TyParen">TyParen</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyParen%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-11' class="method"><span id='from.v-11' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyParen.html" title="struct futures_await_syn::TyParen">TyParen</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyGroup%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyGroup.html" title="struct futures_await_syn::TyGroup">TyGroup</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyGroup%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-12' class="method"><span id='from.v-12' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyGroup.html" title="struct futures_await_syn::TyGroup">TyGroup</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CTyInfer%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.TyInfer.html" title="struct futures_await_syn::TyInfer">TyInfer</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CTyInfer%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-13' class="method"><span id='from.v-13' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.TyInfer.html" title="struct futures_await_syn::TyInfer">TyInfer</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CMac%3E' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../futures_await_syn/struct.Mac.html" title="struct futures_await_syn::Mac">Mac</a>&gt; for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-From%3CMac%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#74-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-14' class="method"><span id='from.v-14' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(e: <a class="struct" href="../futures_await_syn/struct.Mac.html" title="struct futures_await_syn::Mac">Mac</a>) -&gt; <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-ToTokens' class='impl'><span class='in-band'><code>impl <a class="trait" href="../futures_await_quote/to_tokens/trait.ToTokens.html" title="trait futures_await_quote::to_tokens::ToTokens">ToTokens</a> for <a class="enum" href="../futures_await_syn/enum.Ty.html" title="enum futures_await_syn::Ty">Ty</a></code><a href='#impl-ToTokens' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#93-102' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.to_tokens' class="method"><span id='to_tokens.v' class='invisible'><code>fn <a href='../futures_await_quote/to_tokens/trait.ToTokens.html#tymethod.to_tokens' class='fnname'>to_tokens</a>(&amp;self, tokens: &amp;mut <a class="struct" href="../futures_await_quote/tokens/struct.Tokens.html" title="struct futures_await_quote::tokens::Tokens">Tokens</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_syn/macros.rs.html#94-101' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Write <code>self</code> to the given <code>Tokens</code>. <a href="../futures_await_quote/to_tokens/trait.ToTokens.html#tymethod.to_tokens">Read more</a></p>
+</div><h4 id='method.into_tokens' class="method"><span id='into_tokens.v' class='invisible'><code>fn <a href='../futures_await_quote/to_tokens/trait.ToTokens.html#method.into_tokens' class='fnname'>into_tokens</a>(self) -&gt; <a class="struct" href="../futures_await_quote/tokens/struct.Tokens.html" title="struct futures_await_quote::tokens::Tokens">Tokens</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/futures_await_quote/to_tokens.rs.html#44-48' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert <code>self</code> directly into a <code>Tokens</code> object. <a href="../futures_await_quote/to_tokens/trait.ToTokens.html#method.into_tokens">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "futures_await_syn";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

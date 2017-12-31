@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `reactor` mod in crate `reactfs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, reactor">
+
+    <title>reactfs::reactor - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Module reactor</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#macros">Macros</a></li><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li></ul></div><p class='location'><a href='../index.html'>reactfs</a></p><script>window.sidebarCurrent = {name: 'reactor', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>reactfs</a>::<wbr><a class="mod" href=''>reactor</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/reactfs/reactor/mod.rs.html#1-733' title='goto source code'>[src]</a></span></h1>
+<h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.await.html"
+                                  title='macro reactfs::reactor::await'>await</a></td>
+                           <td class='docblock-short'>
+                                <p>Ye Olde Await Macro</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="macro" href="macro.stream_yield.html"
+                                  title='macro reactfs::reactor::stream_yield'>stream_yield</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Core.html"
+                                  title='struct reactfs::reactor::Core'>Core</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>Core</code> of the <code>reactor</code> containing the event loop.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventId.html"
+                                  title='struct reactfs::reactor::EventId'>EventId</a></td>
+                           <td class='docblock-short'>
+                                <p>The ID of an <code>Event</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FSCallStream.html"
+                                  title='struct reactfs::reactor::FSCallStream'>FSCallStream</a></td>
+                           <td class='docblock-short'>
+                                <p><code>Stream</code> returned by <code>Handle::get_fs_call()</code> which will resolve to <code>FSRequest</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FSRequest.html"
+                                  title='struct reactfs::reactor::FSRequest'>FSRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A filesystem request</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FSResponse.html"
+                                  title='struct reactfs::reactor::FSResponse'>FSResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>A filesystem response</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FlushRequest.html"
+                                  title='struct reactfs::reactor::FlushRequest'>FlushRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A block device flush request</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FlushResponse.html"
+                                  title='struct reactfs::reactor::FlushResponse'>FlushResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>A block device flush response</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FutureFlush.html"
+                                  title='struct reactfs::reactor::FutureFlush'>FutureFlush</a></td>
+                           <td class='docblock-short'>
+                                <p><code>Future</code> returned by <code>Handle::flush()</code> which will resolve to <code>()</code> when completed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FutureRead.html"
+                                  title='struct reactfs::reactor::FutureRead'>FutureRead</a></td>
+                           <td class='docblock-short'>
+                                <p><code>Future</code> returned by <code>Handle::read()</code> which will resolve to a <code>Vec&lt;u8&gt;</code> on completion.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FutureWrite.html"
+                                  title='struct reactfs::reactor::FutureWrite'>FutureWrite</a></td>
+                           <td class='docblock-short'>
+                                <p><code>Future</code> returned by <code>Handle::write()</code> which will resolve to <code>()</code> when completed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Handle.html"
+                                  title='struct reactfs::reactor::Handle'>Handle</a></td>
+                           <td class='docblock-short'>
+                                <p>A handle to the <code>reactor::Inner</code> structure of <code>reactor::Core</code> (<code>Weak&lt;RefCell&lt;Inner&gt;&gt;</code>)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReadRequest.html"
+                                  title='struct reactfs::reactor::ReadRequest'>ReadRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A block device read request</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReadResponse.html"
+                                  title='struct reactfs::reactor::ReadResponse'>ReadResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>A block device read response</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SpawnedTask.html"
+                                  title='struct reactfs::reactor::SpawnedTask'>SpawnedTask</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a spawned task.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StreamId.html"
+                                  title='struct reactfs::reactor::StreamId'>StreamId</a></td>
+                           <td class='docblock-short'>
+                                <p>The ID of a <code>Stream</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TaskId.html"
+                                  title='struct reactfs::reactor::TaskId'>TaskId</a></td>
+                           <td class='docblock-short'>
+                                <p>The ID of a <code>Task</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WriteRequest.html"
+                                  title='struct reactfs::reactor::WriteRequest'>WriteRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A block device write request</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WriteResponse.html"
+                                  title='struct reactfs::reactor::WriteResponse'>WriteResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>A block device write response</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.BDRequest.html"
+                                  title='enum reactfs::reactor::BDRequest'>BDRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A block device request</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Event.html"
+                                  title='enum reactfs::reactor::Event'>Event</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an event to be sent to the <code>reactor</code>&#39;s <code>Core</code>&#39;s main loop</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.FutureEvent.html"
+                                  title='enum reactfs::reactor::FutureEvent'>FutureEvent</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an event which destination is a <code>Future</code> </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StreamEvent.html"
+                                  title='enum reactfs::reactor::StreamEvent'>StreamEvent</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an event which destination is a <code>Stream</code> </p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "reactfs";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Element` enum in crate `futures_await_synom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Element">
+
+    <title>futures_await_synom::delimited::Element - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Enum Element</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#variants">Variants</a><div class="sidebar-links"><a href="#variant.Delimited">Delimited</a><a href="#variant.End">End</a></div><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.into_item">into_item</a><a href="#method.item">item</a><a href="#method.item_mut">item_mut</a><a href="#method.delimiter">delimiter</a><a href="#method.into_tuple">into_tuple</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-ToTokens">ToTokens</a><a href="#impl-FromIterator%3CElement%3CT%2C%20D%3E%3E">FromIterator&lt;Element&lt;T, D&gt;&gt;</a><a href="#impl-Extend%3CElement%3CT%2C%20D%3E%3E">Extend&lt;Element&lt;T, D&gt;&gt;</a></div></div><p class='location'><a href='../index.html'>futures_await_synom</a>::<wbr><a href='index.html'>delimited</a></p><script>window.sidebarCurrent = {name: 'Element', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>futures_await_synom</a>::<wbr><a href='index.html'>delimited</a>::<wbr><a class="enum" href=''>Element</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#294-297' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Element&lt;T, D&gt; {
+    Delimited(T,&nbsp;D),
+    End(T),
+}</pre><h2 id='variants' class='variants small-section-header'>
+                   Variants<a href='#variants' class='anchor'></a></h2>
+<span id="variant.Delimited" class="variant small-section-header"><a href="#variant.Delimited" class="anchor field"></a><span id='Delimited.v' class='invisible'><code>Delimited(T,&nbsp;D)</code></span></span><span id="variant.End" class="variant small-section-header"><a href="#variant.End" class="anchor field"></a><span id='End.v' class='invisible'><code>End(T)</code></span></span>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;T, D&gt; <a class="enum" href="../../futures_await_synom/delimited/enum.Element.html" title="enum futures_await_synom::delimited::Element">Element</a>&lt;T, D&gt;</code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#299-334' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.into_item' class="method"><span id='into_item.v' class='invisible'><code>pub fn <a href='#method.into_item' class='fnname'>into_item</a>(self) -&gt; T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#300-305' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.item' class="method"><span id='item.v' class='invisible'><code>pub fn <a href='#method.item' class='fnname'>item</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#307-312' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.item_mut' class="method"><span id='item_mut.v' class='invisible'><code>pub fn <a href='#method.item_mut' class='fnname'>item_mut</a>(&amp;mut self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#314-319' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.delimiter' class="method"><span id='delimiter.v' class='invisible'><code>pub fn <a href='#method.delimiter' class='fnname'>delimiter</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>D&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#321-326' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.into_tuple' class="method"><span id='into_tuple.v' class='invisible'><code>pub fn <a href='#method.into_tuple' class='fnname'>into_tuple</a>(self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">(</a>T, <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;D&gt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">)</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#328-333' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-ToTokens' class='impl'><span class='in-band'><code>impl&lt;T, D&gt; <a class="trait" href="../../futures_await_quote/to_tokens/trait.ToTokens.html" title="trait futures_await_quote::to_tokens::ToTokens">ToTokens</a> for <a class="enum" href="../../futures_await_synom/delimited/enum.Element.html" title="enum futures_await_synom::delimited::Element">Element</a>&lt;T, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../../futures_await_quote/to_tokens/trait.ToTokens.html" title="trait futures_await_quote::to_tokens::ToTokens">ToTokens</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../../futures_await_quote/to_tokens/trait.ToTokens.html" title="trait futures_await_quote::to_tokens::ToTokens">ToTokens</a>,&nbsp;</span></code><a href='#impl-ToTokens' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#445-458' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.to_tokens' class="method"><span id='to_tokens.v' class='invisible'><code>fn <a href='../../futures_await_quote/to_tokens/trait.ToTokens.html#tymethod.to_tokens' class='fnname'>to_tokens</a>(&amp;self, tokens: &amp;mut <a class="struct" href="../../futures_await_quote/tokens/struct.Tokens.html" title="struct futures_await_quote::tokens::Tokens">Tokens</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#449-457' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Write <code>self</code> to the given <code>Tokens</code>. <a href="../../futures_await_quote/to_tokens/trait.ToTokens.html#tymethod.to_tokens">Read more</a></p>
+</div><h4 id='method.into_tokens' class="method"><span id='into_tokens.v' class='invisible'><code>fn <a href='../../futures_await_quote/to_tokens/trait.ToTokens.html#method.into_tokens' class='fnname'>into_tokens</a>(self) -&gt; <a class="struct" href="../../futures_await_quote/tokens/struct.Tokens.html" title="struct futures_await_quote::tokens::Tokens">Tokens</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_quote/to_tokens.rs.html#44-48' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert <code>self</code> directly into a <code>Tokens</code> object. <a href="../../futures_await_quote/to_tokens/trait.ToTokens.html#method.into_tokens">Read more</a></p>
+</div></div><h3 id='impl-FromIterator%3CElement%3CT%2C%20D%3E%3E' class='impl'><span class='in-band'><code>impl&lt;T, D&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.FromIterator.html" title="trait core::iter::traits::FromIterator">FromIterator</a>&lt;<a class="enum" href="../../futures_await_synom/delimited/enum.Element.html" title="enum futures_await_synom::delimited::Element">Element</a>&lt;T, D&gt;&gt; for <a class="struct" href="../../futures_await_synom/delimited/struct.Delimited.html" title="struct futures_await_synom::delimited::Delimited">Delimited</a>&lt;T, D&gt;</code><a href='#impl-FromIterator%3CElement%3CT%2C%20D%3E%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#168-174' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_iter' class="method"><span id='from_iter.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/iter/traits/trait.FromIterator.html#tymethod.from_iter' class='fnname'>from_iter</a>&lt;I:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html" title="trait core::iter::traits::IntoIterator">IntoIterator</a>&lt;Item = <a class="enum" href="../../futures_await_synom/delimited/enum.Element.html" title="enum futures_await_synom::delimited::Element">Element</a>&lt;T, D&gt;&gt;&gt;(i: I) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#169-173' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Creates a value from an iterator. <a href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.FromIterator.html#tymethod.from_iter">Read more</a></p>
+</div></div><h3 id='impl-Extend%3CElement%3CT%2C%20D%3E%3E' class='impl'><span class='in-band'><code>impl&lt;T, D&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.Extend.html" title="trait core::iter::traits::Extend">Extend</a>&lt;<a class="enum" href="../../futures_await_synom/delimited/enum.Element.html" title="enum futures_await_synom::delimited::Element">Element</a>&lt;T, D&gt;&gt; for <a class="struct" href="../../futures_await_synom/delimited/struct.Delimited.html" title="struct futures_await_synom::delimited::Delimited">Delimited</a>&lt;T, D&gt;</code><a href='#impl-Extend%3CElement%3CT%2C%20D%3E%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#186-195' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.extend' class="method"><span id='extend.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/iter/traits/trait.Extend.html#tymethod.extend' class='fnname'>extend</a>&lt;I:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html" title="trait core::iter::traits::IntoIterator">IntoIterator</a>&lt;Item = <a class="enum" href="../../futures_await_synom/delimited/enum.Element.html" title="enum futures_await_synom::delimited::Element">Element</a>&lt;T, D&gt;&gt;&gt;(&amp;mut self, i: I)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/futures_await_synom/delimited.rs.html#187-194' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Extends a collection with the contents of an iterator. <a href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.Extend.html#tymethod.extend">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "futures_await_synom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

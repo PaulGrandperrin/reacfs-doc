@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["fake_bd_loop","This function implements a fake block device."]]});
